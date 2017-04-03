@@ -9,12 +9,14 @@ import (
 	"strings"
 )
 
+//Solr represents a Solr cnx
 type Solr struct {
 	url     string
 	timeout int
 	commit  int
 }
 
+//NewSolr creates a Solr cnx
 func NewSolr(url string, timeout int, commit int) *Solr {
 	solr := new(Solr)
 	solr.url = url
@@ -23,6 +25,7 @@ func NewSolr(url string, timeout int, commit int) *Solr {
 	return solr
 }
 
+//Update send a JSON update to the Solr API using marshmalling of data
 func (solr *Solr) Update(data interface{}) (interface{}, error) {
 
 	value, err := json.Marshal(data)
@@ -56,6 +59,7 @@ func (solr *Solr) Update(data interface{}) (interface{}, error) {
 	return f, nil
 }
 
+//Delete sends a delete call to the Solr API to delete the ids
 func (solr *Solr) Delete(ids []string) (interface{}, error) {
 
 	//append " for json marshalling
@@ -90,6 +94,7 @@ func (solr *Solr) Delete(ids []string) (interface{}, error) {
 	return f, nil
 }
 
+//Query sends the SolrQuery to the Solr API
 func (solr *Solr) Query(query *SolrQuery) (interface{}, error) {
 
 	req, err := http.NewRequest("GET", solr.url+"/query", bytes.NewBuffer(query.Prepare()))
