@@ -5,7 +5,10 @@ go:
   - 1.8
   - tip
 
-script: go build && make test
+script: 
+  - go build 
+  - go install
+  - make test
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
