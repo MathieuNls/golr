@@ -1,4 +1,4 @@
-package golr
+package main
 
 import (
 	"strconv"
