@@ -8,7 +8,7 @@ import (
 
 func TestNew(t *testing.T) {
 
-	query := NewSolrQuery()
+	query := NewSolrJSONBuilder()
 
 	assert := assert.New(t)
 
@@ -19,7 +19,7 @@ func TestNew(t *testing.T) {
 
 func TestQuery(t *testing.T) {
 
-	query := NewSolrQuery()
+	query := NewSolrJSONBuilder()
 	query.Query("*:*")
 
 	assert := assert.New(t)
@@ -29,7 +29,7 @@ func TestQuery(t *testing.T) {
 
 func TestFilter(t *testing.T) {
 
-	query := NewSolrQuery()
+	query := NewSolrJSONBuilder()
 	query.
 		Filter("a", "b").
 		Filter("c", "d")
@@ -42,7 +42,7 @@ func TestFilter(t *testing.T) {
 
 func TestLimit(t *testing.T) {
 
-	query := NewSolrQuery()
+	query := NewSolrJSONBuilder()
 	query.Limit(1)
 
 	assert := assert.New(t)
@@ -52,7 +52,7 @@ func TestLimit(t *testing.T) {
 
 func TestOffset(t *testing.T) {
 
-	query := NewSolrQuery()
+	query := NewSolrJSONBuilder()
 	query.Offset(1)
 
 	assert := assert.New(t)
@@ -62,7 +62,7 @@ func TestOffset(t *testing.T) {
 
 func TestField(t *testing.T) {
 
-	query := NewSolrQuery()
+	query := NewSolrJSONBuilder()
 	query.Field("a").Field("b")
 
 	assert := assert.New(t)
@@ -72,7 +72,7 @@ func TestField(t *testing.T) {
 
 func TestSort(t *testing.T) {
 
-	query := NewSolrQuery()
+	query := NewSolrJSONBuilder()
 	query.Sort("a", "desc")
 
 	assert := assert.New(t)
@@ -82,7 +82,7 @@ func TestSort(t *testing.T) {
 
 func TestFacet(t *testing.T) {
 
-	query := NewSolrQuery()
+	query := NewSolrJSONBuilder()
 	query.Facet("avg_price", "avg(price)")
 
 	assert := assert.New(t)
@@ -92,7 +92,7 @@ func TestFacet(t *testing.T) {
 
 func TestPrepare(t *testing.T) {
 
-	query := NewSolrQuery()
+	query := NewSolrJSONBuilder()
 
 	query.Facet("avg_price", "avg(price)").
 		Sort("a", "desc").

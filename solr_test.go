@@ -20,7 +20,7 @@ func TestNewSolr(t *testing.T) {
 
 func TestQuerySolr(t *testing.T) {
 
-	query := NewSolrQuery()
+	query := new(SolrJSONBuilder)
 	solr := NewSolr("http://127.0.0.1:8983/solr/aa", 10, 10)
 	query.Query("*:*")
 

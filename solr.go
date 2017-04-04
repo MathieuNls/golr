@@ -95,7 +95,7 @@ func (solr *Solr) Delete(ids []string) (interface{}, error) {
 }
 
 //Query sends the SolrQuery to the Solr API
-func (solr *Solr) Query(query *SolrQuery) (interface{}, error) {
+func (solr *Solr) Query(query *SolrJSONBuilder) (interface{}, error) {
 
 	req, err := http.NewRequest("GET", solr.url+"/query", bytes.NewBuffer(query.Prepare()))
 	req.Header.Set("Content-Type", "application/json")
