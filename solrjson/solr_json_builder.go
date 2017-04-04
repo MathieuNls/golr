@@ -1,6 +1,7 @@
 package golr
 
 import (
+	"fmt"
 	"strconv"
 	"strings"
 )
@@ -94,7 +95,7 @@ func (solrQuery *SolrJSONBuilder) Prepare() []byte {
 	}
 
 	if len(solrQuery.fields) > 0 {
-		jsonValue += ", filter : [" + strings.Join(solrQuery.fields, ",") + "]"
+		jsonValue += ", fields : [" + strings.Join(solrQuery.fields, ",") + "]"
 	}
 
 	if len(solrQuery.sort) > 0 {
@@ -106,6 +107,8 @@ func (solrQuery *SolrJSONBuilder) Prepare() []byte {
 	}
 
 	jsonValue += "}"
+
+	fmt.Println(jsonValue)
 
 	return []byte(jsonValue)
 }
