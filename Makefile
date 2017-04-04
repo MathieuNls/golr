@@ -8,3 +8,4 @@ build:
 	go get github.com/mathieunls/golr/engine
 	go get github.com/mathieunls/golr/solrjson
 	go get github.com/jarcoal/httpmock
+	go get github.com/stretchr/testify/assert
