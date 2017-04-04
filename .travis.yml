@@ -6,8 +6,8 @@ go:
   - tip
 
 script: 
-  - go build 
-  - go install
+  - go get github.com/mathieunls/golr/engine
+  - go get github.com/mathieunls/golr/solrjson
   - make test
 
 after_success:
