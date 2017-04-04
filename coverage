@@ -1,0 +1,24 @@
+mode: set
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:20.44,28.2 5 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:31.72,35.2 2 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:38.87,41.2 2 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:44.71,47.2 2 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:50.69,53.2 2 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:56.72,59.2 2 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:62.85,65.2 2 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:68.86,71.2 2 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:74.52,78.31 2 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:82.2,84.27 2 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:88.2,88.26 1 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:92.2,92.32 1 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:96.2,96.31 1 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:100.2,100.29 1 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:104.2,104.31 1 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:108.2,110.26 2 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:78.31,80.3 1 0
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:84.27,86.3 1 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:88.26,90.3 1 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:92.32,94.3 1 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:96.31,98.3 1 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:100.29,102.3 1 1
+github.com\mathieunls\golr\solrjson\solr_json_builder.go:104.31,106.3 1 1

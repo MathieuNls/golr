@@ -1,4 +1,4 @@
-package main
+package golr
 
 import (
 	"bytes"
@@ -7,6 +7,8 @@ import (
 	"net/http"
 	"strconv"
 	"strings"
+
+	golr "github.com/mathieunls/golr/solrjson"
 )
 
 //Solr represents a Solr cnx
@@ -95,7 +97,7 @@ func (solr *Solr) Delete(ids []string) (interface{}, error) {
 }
 
 //Query sends the SolrQuery to the Solr API
-func (solr *Solr) Query(query *SolrJSONBuilder) (interface{}, error) {
+func (solr *Solr) Query(query *golr.SolrJSONBuilder) (interface{}, error) {
 
 	req, err := http.NewRequest("GET", solr.url+"/query", bytes.NewBuffer(query.Prepare()))
 	req.Header.Set("Content-Type", "application/json")

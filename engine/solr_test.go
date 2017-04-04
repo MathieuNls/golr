@@ -1,4 +1,4 @@
-package main
+package golr
 
 import (
 	"encoding/json"
@@ -7,6 +7,7 @@ import (
 	"testing"
 
 	"github.com/jarcoal/httpmock"
+	golr "github.com/mathieunls/golr/solrjson"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -20,7 +21,7 @@ func TestNewSolr(t *testing.T) {
 
 func TestQuerySolr(t *testing.T) {
 
-	query := new(SolrJSONBuilder)
+	query := new(golr.SolrJSONBuilder)
 	solr := NewSolr("http://127.0.0.1:8983/solr/aa", 10, 10)
 	query.Query("*:*")
 
