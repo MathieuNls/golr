@@ -71,7 +71,7 @@ func (solr *Solr) Delete(ids []string) (interface{}, error) {
 
 	jsonIds := "{ \"delete\":[" + strings.Join(ids, ", ") + "] }"
 
-	req, err := http.NewRequest("POST", solr.url+"/update", bytes.NewBuffer([]byte(jsonIds)))
+	req, err := http.NewRequest("POST", solr.url+"/update?commitWithin"+strconv.Itoa(solr.commit), bytes.NewBuffer([]byte(jsonIds)))
 	req.Header.Set("Content-Type", "application/json")
 
 	client := &http.Client{}
